@@ -74,6 +74,15 @@ which makes sure the data is only copied when necessary.
     array.filter { someCriteria($0) }
 """
 
+// Array Types = Slices
+"""
+In addition to accessing a single element of an array by
+subscript (e.g. fibs[0]), we can also access a range of elements by subscript.
+For example, to get all but the first element of an array, we can do the following:
+"""
+let slice = fibs[1..<fibs.endIndex]
+slice // [1, 1, 2, 3, 5]
+type(of: slice) // ArraySlice<Int>
 //: [Next](@next)
 
 
